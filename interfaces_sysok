@@ -1,0 +1,21 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+auto eth0
+iface eth0 inet static
+address 102.313.990.52
+netmask 255.255.255.0
+post-up route add -net 102.0.0.0 netmask 255.0.0.0 gw 102.313.990.254 metric 102 eth0
+
+# The primary network interface
+#auto eth2
+#iface eth2 inet dhcp
+auto eth1
+iface eth1 inet static
+address 192.168.241.253
+netmask 255.255.255.0
+gateway 192.168.0.100
+post-up iptables -I OUTPUT -o eth1 -j DROP;iptables -I OUTPUT -o eth1 -j ACCEPT
