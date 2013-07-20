@@ -1,7 +1,7 @@
-# This file is add by BYD for config Build infomation.
+# This file is add by WST021 for config Build infomation.
 
-export BUILD_NUMBER=29
-export BUILD_DISPLAY_ID_IVERSION="W101HM_${BUILD_NUMBER}_20130719"
+export BUILD_NUMBER=1
+export BUILD_DISPLAY_ID_IVERSION="WST021_${BUILD_NUMBER}_20130719"
 export CUST_BUILD_VERSION="v0.00.00_20130719"
 
 export CUST_PRODUCT_NAME=
